@@ -1,0 +1,14 @@
+---
+- name: this playbook is about using github repository
+  hosts: managable-nodes
+  tasks:
+  
+  - name: adding a user  
+    user:
+      name: shahid
+      state: present
+      
+  - name: installing a service      
+    yum:
+      name: nfs-utils
+      state: absent
